@@ -4,6 +4,11 @@
 
 Bu proje, Google Gemini API ve RAG (Retrieval-Augmented Generation) mimarisi kullanarak geliştirilmiş bir Netflix içerik öneri chatbotudur.
 
+🌐 Live Demo
+
+Uygulamayı canlı olarak buradan test edebilirsiniz:
+https://netflix-rag-chatbot-8dfx6pyfbmoewm76tjmb6c.streamlit.app/
+
 Kullanıcılar doğal dilde “Netflix’te ne izlemeliyim?” gibi sorular sorabilir; sistem, Netflix veri setinden uygun dizi veya film önerilerini doğal dil yanıtlarıyla döndürür.
 
 Proje, yapay zekâ tabanlı metin sorgulama, veri indeksleme ve semantik arama yöntemlerini bir araya getirir.
@@ -128,5 +133,6 @@ Netflix veri setinden ilgili türde içerikleri getirmektedir.
 RAG mimarisi sayesinde doğruluk oranı yüksek ve bağlama uygun öneriler sağlanmıştır.
 
 Gemini API, yanıtları akıcı ve kullanıcı dostu biçimde üretmektedir.
+
 
 
