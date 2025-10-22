@@ -1,5 +1,5 @@
 🎬 Netflix RAG Chatbot with Gemini
-)
+
 🧠 Projenin Amacı
 
 Bu proje, Google Gemini API ve RAG (Retrieval-Augmented Generation) mimarisi kullanarak geliştirilmiş bir Netflix içerik öneri chatbotudur.
