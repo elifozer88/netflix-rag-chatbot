@@ -121,7 +121,6 @@ Arayüzde kullanıcıya sade bir sohbet ekranı sunulur:
 
 🧩 Chatbot, isteğe göre dizi/film adı, tür veya ülke bazında öneriler getirir.
 🧠 Yanıtlar Gemini API’den gelir ve kullanıcıya doğal bir şekilde sunulur.
-<img width="2878" height="1579" alt="image" src="https://github.com/user-attachments/assets/ad492050-43ab-4daf-af02-be1bc0ae5731" />
 
 
 📈 Elde Edilen Sonuçlar
@@ -133,6 +132,7 @@ Netflix veri setinden ilgili türde içerikleri getirmektedir.
 RAG mimarisi sayesinde doğruluk oranı yüksek ve bağlama uygun öneriler sağlanmıştır.
 
 Gemini API, yanıtları akıcı ve kullanıcı dostu biçimde üretmektedir.
+
 
 
 
