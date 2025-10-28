@@ -28,19 +28,28 @@ class RAGPipeline:
         - Metadata CSV'sini yükle
         - Embedding modelini yükle
         """
+        # Eğer src/ klasöründen çalıştırılıyorsa, üst klasöre çık
+        if Path("../faiss_index").exists():
+            base_dir = Path("..")
+        else:
+            base_dir = Path(".")
+        
         # Path'leri pathlib ile düzelt (Windows uyumlu)
-        index_path = Path(index_path)
-        metadata_path = Path(metadata_path)
+        index_path = base_dir / index_path if isinstance(index_path, str) else index_path
+        metadata_path = base_dir / metadata_path if isinstance(metadata_path, str) else metadata_path
         
+        # Dosya kontrolü
         if not index_path.exists():
-            raise FileNotFoundError(f"FAISS index bulunamadı: {index_path}")
+            raise FileNotFoundError(f"FAISS index bulunamadı: {index_path.absolute()}")
         if not metadata_path.exists():
-            raise FileNotFoundError(f"Metadata dosyası bulunamadı: {metadata_path}")
+            raise FileNotFoundError(f"Metadata dosyası bulunamadı: {metadata_path.absolute()}")
         
+        # FAISS ve metadata yükle
         self.index = faiss.read_index(str(index_path))
-        self.df = pd.read_csv(metadata_path)
+        self.df = pd.read_csv(str(metadata_path))
         self.embedding_model = SentenceTransformer(model_name)
-        print("✅ RAG Pipeline başlatıldı (Gemini ile)")
+        print(f"✅ RAG Pipeline başlatıldı (Gemini ile)")
+        print(f"📊 Toplam {len(self.df)} içerik yüklendi")
 
     def retrieve(self, query, top_k=5):
         """
@@ -81,6 +90,8 @@ Aşağıdaki Netflix içerikleri veriliyor:
 Yukarıdaki bilgileri kullanarak soruyu Türkçe olarak cevapla. Yanıtında hangi film/dizileri referans aldığını belirt. Kısa ve öz cevap ver."""
 
         # Gemini'den yanıt al
-        response = model.generate_content(prompt)
-        
-        return response.text
+        try:
+            response = model.generate_content(prompt)
+            return response.text
+        except Exception as e:
+            return f"❌ Gemini API Hatası: {str(e)}\n\n💡 GEMINI_API_KEY kontrolünü yap."
