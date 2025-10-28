@@ -133,6 +133,54 @@ RAG mimarisi sayesinde doğruluk oranı yüksek ve bağlama uygun öneriler sağ
 
 Gemini API, yanıtları akıcı ve kullanıcı dostu biçimde üretmektedir.
 
+Feedback'lerin ardından yaptığım güncellemeler 28.10.2025
+
+🧩 Kullanıcı Dostu Özellikler ve Yenilikler
+
+Bu Streamlit arayüzü, kullanıcı deneyimini iyileştirmek için bir dizi kullanıcı dostu özellik içeriyor:
+
+Tema Seçimi:
+
+Netflix, Aydınlık, Okyanus ve Gün Batımı gibi farklı renk temalarıyla arayüz kişiselleştirilebilir.
+
+Kullanıcı tercihlerine göre tema değiştirmek anında uygulanır.
+
+Referans İçerik Kontrolü:
+
+Kullanıcı, kaç içerik referans alınacağını slider ile seçebilir (1–10).
+
+Referans içerikler ve detayları, isteğe bağlı olarak gösterilip gizlenebilir.
+
+Detaylı Bilgi ve Metadata:
+
+Referans içeriklerde dizi/film türü, açıklama, yayın yılı ve yaş derecelendirmesi gösterilebilir.
+
+Kullanıcı, sadece özet veya tam detay görünümünü seçebilir.
+
+Gerçek Zamanlı İstatistikler:
+
+Kullanıcının sorduğu soru sayısı ve chatbot tarafından sunulan içerik sayısı anlık olarak gösterilir.
+
+Etkileşimli ve Canlı Geri Bildirim:
+
+Soru gönderildiğinde, yanıt hazırlanırken yapay zekânın çalıştığını gösteren animasyonlu bir ilerleme çubuğu kullanılır.
+
+Yanıt tamamlandığında balon animasyonu ile olumlu geri bildirim sağlanır.
+
+Kontrol Paneli:
+
+Sayfa yenileme ve geçmişi temizleme butonları sayesinde kullanıcı deneyimi tamamen kontrol altında.
+
+Chatbot geçmişi temizlendiğinde istatistikler sıfırlanır ve arayüz tazelenir.
+
+Kolay Okunabilir ve Modern Tasarım:
+
+Butonlar, input alanları ve expanders (açılır içerik kutuları) görsel olarak modern ve okunabilir.
+
+Arka plan, başlıklar, metinler ve kartlar için temaya uygun renkler kullanılarak görsel tutarlılık sağlanmıştır.
+
+Bu geliştirmeler, kullanıcıların doğal dilde sorular sorarken rahat ve etkileşimli bir deneyim yaşamalarını sağlıyor ve yapay zekâ tabanlı içerik öneri sistemlerini daha erişilebilir hale getiriyor.
+
 
 
 
